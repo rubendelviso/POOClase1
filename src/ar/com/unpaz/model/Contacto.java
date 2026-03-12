@@ -20,12 +20,17 @@ public void setCodigoPostal(int CodigoPost) {
 	this.CodigoPostal = CodigoPost;
 		
 }
-public void documento(int doc) {this.Documento = doc;}
-public void Email(String mail) {this.Email = mail;}
+public void setDocumento(int doc) {this.Documento = doc;}
+public void setEmail(String mail) {this.Email = mail;}
 
 //ahora los get
 
-public String getFechaDeNacimiento () {return fechaDeNacimiento;}
-public String getNombre(){return Nombre;}
+public String getFechaDeNacimiento () {return this.fechaDeNacimiento;}
+public String getNombre(){return this.Nombre;}
+public int getCodigoPostal(){return this.CodigoPostal;}
+public int getDocumento(){return this.Documento;}
+public String getEmail() {return this.Email;}
+
+
 
 }

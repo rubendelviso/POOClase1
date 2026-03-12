@@ -1,6 +1,7 @@
 package ar.com.unpaz.model;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Cliente {
 
@@ -20,8 +21,13 @@ public class Cliente {
 		return this.cuenta;
 	}
 	
-	public void setCuenta(List<Cuenta> cuentaNueva) {
-		this.cuenta = cuentaNueva;
+	public Cliente() {
+		this.cuenta = new ArrayList<>();
+	    }
+	
+	
+	public void addCuenta(Cuenta cuentaNueva) {
+		this.cuenta.add(cuentaNueva);//Este metodo solo agrega cuentas (de a 1)
 	}
 	
 	public Contacto getContacto() {
