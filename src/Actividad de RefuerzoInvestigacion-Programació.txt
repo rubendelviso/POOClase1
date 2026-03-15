@@ -1,0 +1,90 @@
+Actividad de Refuerzo - Programación orientada a objetos
+
+• ¿Qué es una clase en programación orientada a objetos?
+• ¿Qué es un objeto? ¿Cuál es la diferencia entre una clase y un objeto?
+• ¿Qué es un atributo dentro de una clase? Dar un ejemplo.
+¿Para qué se utilizan los modificadores de acceso private y public?
+• ¿Qué significa crear o instanciar un objeto y qué función cumple la palabra clave new en Java?
+
+
+1)Las clases son modelos o abstracciones de la realidad que representan un elemento de un conjunto de objetos como aviones, animales, personas, autos, computadoras, ecuaciones, figuras geométricas, elementos de una interfaz gráfica, archivos, etc.
+
+2)Los objetos son al final instancias de la clase mencionada anteriormente con datos mas específicos, es decir, se crea a partir del modelado de la clase. La diferencia esta entre este y una clase, es que esta ultima se define una vez y se usa para crear múltiples objetos y el objeto por otro lado tiene su propia identidad única y puede tener diferentes valores para sus propiedades.
+
+3)También conocidos como campos o variables miembro, los atributos son variables declaradas dentro de una clase. Estos definen las propiedades o el estado de un objeto creado a partir de la clase.
+
+4)Modificadores de acceso
+Public: Este modificador de acceso te permite acceder como miembro a cualquier parte del código en el que se haga referencia.
+public class EjemploPublic
+{
+    public string PruebaAcceso { get; set; }
+}
+ 
+class Program
+{
+    static void Main(string[] args)
+    {
+        EjemploPublic ejemplo = new EjemploPublic();
+        Console.WriteLine(ejemplo.PruebaAcceso); //Funciona correctamente
+    }
+}
+
+Private:En cambio este te permite acceder a los miembros exclusivamente desde la clase que los contiene
+public class EjemploPrivate
+{
+    private string PruebaAcceso { get; set; }
+
+    public EjemploPrivate(){
+        PruebaAcceso = "funciona";//Funciona
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        EjemploPrivate ejemplo = new EjemploPrivate();
+        Console.WriteLine(ejemplo.PruebaAcceso); //Da un error
+    }
+}
+
+---------------------------------------------------------------
+
+
+
+Actividad de Investigación Listas
+En la próxima clase comenzaremos a trabajar con listas, una estructura de datos muy utilizada en programación para almacenar múltiples elementos.
+El objetivo de esta actividad es investigar algunos conceptos básicos que veremos en clase.
+Respondan las siguientes preguntas utilizando sus propias palabras:
+1. ¿Qué es una lista en programación?
+2. ¿Para qué se utilizan las listas? Dar un ejemplo de un problema donde sea útil utilizar una lista.
+3. ¿Qué diferencia hay entre guardar un solo valor en una variable y guardar varios valores en una lista?
+4. ¿Qué operaciones básicas se pueden realizar con una lista? (por ejemplo: agregar, eliminar, recorrer, etc.).
+5. Investigá cómo se crea una lista en Java utilizando ArrayList.
+
+1)En programación, una lista es una estructura de datos que permite almacenar varios elementos (números, palabras, objetos) bajo un mismo nombre, manteniendo un orden específico.
+
+2)En muchos casos las listas son utilizadas sobre las demás estructuras por la capacidad de guardar datos sin estar condicionados por el espacio y por la facilidad de procesar e iterar dicha estructura.
+Puesto en un ejemplo:
+Si estuviesemos programando una tienda online. No podemos utilizar variables simples porque no sabes si el cliente comprará 1 producto o 50.
+Sin lista:
+Tendrías que crear variables como producto1, producto2, producto3... Si el cliente quiere comprar 4 cosas y solo programaste 3 variables, ¡el sistema colapsa! Además, calcular el total sería una pesadilla de código repetitivo.
+Con listas :
+Creas una sola lista llamada carrito.
+Entonces si el usuario hace clic en "Comprar", simplemente haces un carrito.append("producto 1"). La lista crece sola. Y así con otros tareas como el calculo del total, el cual se solucionaría iterando-sumando los elementos de la lista.
+
+3)La diferencia entre guardar un valor en una variable y varios valores en una lista justamente es la diferencia de capacidad de guardar de uno con respecto a otro, lo que hace mas conveniente en algunos casos el uso de uno sobre el otro.
+
+4)Actividades que se pueden realizar con una lista:
+Insertar: Agregar un elemento en cualquiera de las posiciones.
+
+Eliminar: Quitar un elemento en cualquiera de las posiciones.
+
+Recorrer: Usar un bucle (como un for) para leer cada elemento uno por uno.
+
+Ordenar: Organizar los nombres alfabéticamente o los números de menor a mayor.
+
+Para crear una lista en java:
+.lo primero y principal es importar la dependencia para ello (import java.util.ArrayList)
+.Luego es tan fácil como utilizar la palabra reservada -> new, seguido colocaremos el metodo propio de la dependencia importada (ArrayList<>()) asignándolo a una variable la cual puede ser -> lista1.
+Ejemplo: lista1 = new ArrayList<>();
+
